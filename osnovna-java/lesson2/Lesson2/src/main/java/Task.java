@@ -1,28 +1,39 @@
 import java.io.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Task {
     public static void main(String[] args) {
 
-        double kilometers;
-        double conversionFactor;
+        double kilometers = 0;
+        double conversionFactor = 0;
+        boolean isNumber = true;
+
+        Scanner scanner = new Scanner(System.in);
         do {
-            Scanner scanner = new Scanner(System.in);
+            try {
+                System.out.print("Enter kilometers: ");
+                kilometers = scanner.nextDouble();
 
-            System.out.print("Enter kilometers: ");
-            kilometers = scanner.nextDouble();
+                System.out.print("Enter conversion factor: ");
+                conversionFactor = scanner.nextDouble();
+            } catch (InputMismatchException e) {
+                isNumber = false;
+                System.out.println("Please make sure you are entering valid numbers.");
+                scanner.nextLine();
+            }
 
-            System.out.print("Enter conversion factor: ");
-            conversionFactor = scanner.nextDouble();
-
-            if (kilometers <= 0 && conversionFactor <= 0) {
-                System.out.println("Please make sure both kilometers and conversion factor are greater than zero.");
-            } else if (kilometers <= 0) {
-                System.out.println("Please make sure kilometers are greater than zero.");
-            } else if (conversionFactor <= 0) {
-                System.out.println("Please make sure conversion factor is greater than zero.");
+            if (isNumber) {
+                if (kilometers <= 0 && conversionFactor <= 0) {
+                    System.out.println("Please make sure both kilometers and conversion factor are greater than zero.");
+                } else if (kilometers <= 0) {
+                    System.out.println("Please make sure kilometers are greater than zero.");
+                } else if (conversionFactor <= 0) {
+                    System.out.println("Please make sure conversion factor is greater than zero.");
+                }
             }
         } while (kilometers <= 0 || conversionFactor <= 0);
+        scanner.close();
 
         File file = new File("conversion_factor.txt");
         try {
