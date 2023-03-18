@@ -14,10 +14,6 @@ public class Task3 {
             try {
                 System.out.print("Enter an integer: ");
                 input = scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input, please enter an integer.");
-                scanner.nextLine();
-            }
 
                 switch (input % 7) {
                     case 0 -> System.out.println("Sunday");
@@ -31,12 +27,16 @@ public class Task3 {
 
                 if (input == 0) {
                     continue;
-                } else if (input % 2 == 0) {
+                } else if (input % 2 == 0 && input > 0) {
                     sum += input;
                 } else {
                     break;
                 }
-        } while(input >= 0);
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please enter an integer.");
+                scanner.nextLine();
+            }
+        } while (input >= 0);
 
         scanner.close();
         System.out.println("Sum: " + sum);
