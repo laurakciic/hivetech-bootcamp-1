@@ -44,11 +44,11 @@ public class Task4 {
         // converting Map into a List
         List<Map.Entry<String, String>> list = new LinkedList<>(map.entrySet());
 
-        list.sort(new Comparator<Map.Entry<String, String>>() {
-            public int compare(Map.Entry<String, String> o1, Map.Entry<String, String> o2) {
-                return o1.getKey().compareTo(o2.getKey());
-            }
-        });
+        // sort list alphabetically
+        list = list
+                .stream()
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toList());
 
         for (Map.Entry<String, String> entry : list) {
             System.out.println(entry.getKey() + " by " + entry.getValue());
