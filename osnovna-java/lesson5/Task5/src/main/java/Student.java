@@ -1,31 +1,8 @@
-public class Student {
-    String ime;
-    String prezime;
+public class Student extends Osoba {
+
     int godinaStudija;
     String brojIndeksa;
-
-    public Student(String ime, String prezime, int godinaStudija, String brojIndeksa) {
-        this.ime = ime;
-        this.prezime = prezime;
-        this.godinaStudija = godinaStudija;
-        this.brojIndeksa = brojIndeksa;
-    }
-
-    public String getIme() {
-        return ime;
-    }
-
-    public void setIme(String ime) {
-        this.ime = ime;
-    }
-
-    public String getPrezime() {
-        return prezime;
-    }
-
-    public void setPrezime(String prezime) {
-        this.prezime = prezime;
-    }
+    Profesor profesor;
 
     public int getGodinaStudija() {
         return godinaStudija;
@@ -41,5 +18,13 @@ public class Student {
 
     public void setBrojIndeksa(String brojIndeksa) {
         this.brojIndeksa = brojIndeksa;
+    }
+
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
     }
 }

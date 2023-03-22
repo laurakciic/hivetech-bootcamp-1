@@ -5,8 +5,14 @@ public class Evidencija {
 
     List<Student> studenti = new ArrayList<>();
 
-    public void dodajStudenta(String ime, String prezime, int godinaStudija, String brojIndeksa) {
-        Student student = new Student(ime, prezime, godinaStudija, brojIndeksa);
+    public void dodajStudenta(String ime, String prezime, int godinaStudija, String brojIndeksa, Profesor profesor) {
+        Student student = new Student();
+        student.setIme(ime);
+        student.setPrezime(prezime);
+        student.setGodinaStudija(godinaStudija);
+        student.setBrojIndeksa(brojIndeksa);
+        student.setProfesor(profesor);
+
         studenti.add(student);
         System.out.println("Student dodan.");
         System.out.println();
@@ -16,8 +22,6 @@ public class Evidencija {
         for(Student student: studenti) {
             if(student.getBrojIndeksa().equals(brojIndeksa)) {
                 System.out.println("Student pronađen: " + student.getIme() + " " + student.getPrezime());
-            } else {
-                System.out.println("Nije pronaden student s navedenim indeksom.");
             }
         }
         System.out.println();
@@ -27,8 +31,16 @@ public class Evidencija {
         System.out.println("---Popis studenata---");
 
         for(Student student: studenti) {
-            System.out.println(student.getIme() + " " + student.getPrezime());
+            System.out.println(student.getIme() + " " + student.getPrezime() + ", profesor: " + student.getProfesor().getIme() + "  " + student.getProfesor().getPrezime());
         }
         System.out.println();
+    }
+
+    public Profesor kreirajProfesora(String ime, String prezime) {
+        Profesor profesor = new Profesor();
+        profesor.setIme(ime);
+        profesor.setPrezime(prezime);
+
+        return profesor;
     }
 }

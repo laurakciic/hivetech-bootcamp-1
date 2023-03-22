@@ -6,9 +6,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         String ime, prezime, brojIndeksa, indeksZaPretragu;
+        String imeProfesora, prezimeProfesora;
         int godinaStudija;
         int menu = 0;
         boolean shouldContinue = true;
+
+        Profesor profesor;
 
         Evidencija evidencija = new Evidencija();
 
@@ -34,7 +37,14 @@ public class Main {
                     System.out.print("Unesite broj indeksa: ");
                     brojIndeksa = scanner.next();
 
-                    evidencija.dodajStudenta(ime, prezime, godinaStudija, brojIndeksa);
+                    System.out.print("Unesite ime profesora kojeg zelite dodijeliti studentu: ");
+                    imeProfesora = scanner.next();
+
+                    System.out.print("Unesite prezime profesora kojeg zelite dodijeliti studentu: ");
+                    prezimeProfesora = scanner.next();
+
+                    profesor = evidencija.kreirajProfesora(imeProfesora, prezimeProfesora);
+                    evidencija.dodajStudenta(ime, prezime, godinaStudija, brojIndeksa, profesor);
                     break;
                 case 2:
                     System.out.print("Unesite indeks za pretragu: ");
