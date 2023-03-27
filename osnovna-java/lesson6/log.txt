@@ -1,0 +1,4 @@
+Mar 27, 2023 1:47:13 PM com.laurakovacic.task6.Task6Application main
+INFO: Successfully created log file.
+Mar 27, 2023 1:47:13 PM com.laurakovacic.task6.Task6Application main
+SEVERE: Hourly rate and/or hours worked cannot be smaller than 1.
