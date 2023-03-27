@@ -12,10 +12,7 @@ public class Employee {
     public Employee(String firstName, String lastName, int hourlyRate, int hoursWorked) throws InsufficientArgumentException {
         this.firstName = firstName;
         this.lastName = lastName;
-
-        /**
-         * before calculating the salary, check for an invalid input of arguments
-         */
+        
         if (hourlyRate < 1 || hoursWorked < 1) {
             throw new InsufficientArgumentException("Hourly rate and/or hours worked cannot be smaller than 1.");
         } else {
