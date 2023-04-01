@@ -1,4 +1,5 @@
 import exceptions.DuplicateVehicleException;
+import exceptions.EmptyFleetException;
 import exceptions.NoSuchVehicleException;
 import models.Car;
 import models.Truck;
@@ -131,6 +132,14 @@ public class Main {
     }
 
     public static void removeVehicle() {
+        try {
+            service.isFleetEmpty();
+        } catch (EmptyFleetException e) {
+            LOGGER.warning("Tried to remove a vehicle from an empty fleet.");
+            System.out.println("Cannot remove vehicle from an empty fleet, please add some first.");
+            return;
+        }
+
         int vin = vehicleToRemove();                                    // get vin
         try {
             System.out.println(service.removeVehicleFromFleet(vin));    // pass vin to a method for removing a vehicle

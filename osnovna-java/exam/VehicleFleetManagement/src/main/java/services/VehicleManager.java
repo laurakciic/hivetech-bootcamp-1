@@ -1,11 +1,14 @@
 package services;
 
 import exceptions.DuplicateVehicleException;
+import exceptions.EmptyFleetException;
 import exceptions.NoSuchVehicleException;
 import models.Vehicle;
 
 public interface VehicleManager {
     void addVehicleToFleet(Vehicle vehicle);
+
+    boolean isFleetEmpty() throws EmptyFleetException;
 
     boolean vinAlreadyExists(int VIN);
 
