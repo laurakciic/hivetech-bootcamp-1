@@ -93,7 +93,7 @@ public class VehicleManagerImpl implements VehicleManager {
         List<Vehicle> foundVehicles = new ArrayList<>();
 
         for (Vehicle vehicle: fleet) {
-            if (vehicle.getModel().equals(model)) {
+            if (vehicle.getModel().equalsIgnoreCase(model)) {
                 foundVehicles.add(vehicle);
             }
         }
@@ -116,7 +116,7 @@ public class VehicleManagerImpl implements VehicleManager {
         List<Vehicle> foundVehicles = new ArrayList<>();
 
         for (Vehicle vehicle: fleet) {
-            if (vehicle.getManufacturer().equals(manufacturer)) {
+            if (vehicle.getManufacturer().equalsIgnoreCase(manufacturer)) {
                 foundVehicles.add(vehicle);
             }
         }
