@@ -1,6 +1,6 @@
 # Java Bootcamp by HiveTech
 
-This bootcamp was held by the Croatian firm HiveTech and provides a comprehensive learning experience for those looking to enhance their Java programming skills.
+The bootcamp was held by the Croatian firm HiveTech and provides a comprehensive learning experience for those looking to enhance their Java programming skills.
 
 ## Topics 
 ## Basic Java
