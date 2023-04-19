@@ -1,0 +1,11 @@
+Stvorite hijerarhiju klasa koja uključuje osnovnu klasu i najmanje dvije izvedene klase. Na primjer, možete stvoriti osnovnu klasu pod nazivom Vozilo i izvedene klase pod nazivom Auto i Kamion.
+
+Svaka klasa treba imati najmanje dva polja i dvije metode. Na primjer, klasa vozila može imati polje boja i metodu drive().
+
+Implementirajte nasljeđivanje tako da izvedene klase nasljeđuju polja i metode osnovne klase. Na primjer, klasa Auto može naslijediti polje boja i metodu drive() od klase Vozilo.
+
+Implementirajte polimorfizam tako da svaka klasa implementira barem jednu metodu s istim imenom i potpisom kao metoda u osnovnoj klasi. Na primjer, klasa Auto može implementirati metodu drive() koja nadjačava metodu drive() u klasi Vozilo.
+
+Napravite metodu main() koja stvara instance svake klase i poziva njihove metode. Na primjer, možete stvoriti objekt Auto, objekt Kamion i objekt Vozilo, a zatim pozvati njihove metode drive() kako biste demonstrirali polimorfno ponašanje.
+
+Dodatni kredit: Stvorite sučelje s metodom koju implementira svaka klasa. Na primjer, možete stvoriti Accelerable sučelje s metodom accelerate(), a svaka klasa implementirati metodu accelerate() na svoj način.
