@@ -1,0 +1,17 @@
+ZADATAK - STREAMOVI
+
+1. kreirajte klasu "Sale" koja će predstavljati prodaju koju je prodavač napravio. Klasa bi  trebala sadržavati sljedeća polja:
+	salesPerson - naziv prodavača
+	region - regija u kojoj je prodaja obavljena
+	amount - iznos prodaje
+
+2. Kreirajte klasu "StreamProcessor" koja će sadržavati sljedeće metode:
+	getTotalSales(List<Sale> sales) - ova metoda bi trebala vratiti ukupan iznos prodaja
+
+	getSalesByRegion(List<Sale> sales, String region) - ova metoda bi trebala vratiti listu svih prodaja obavljenih u određenoj regiji.
+
+	getTopSalesPeople(List<Sale> sales, int n) - voa metoda bi trebala vratiti popis n prodavača koji su napravili najviše prodaja. Popis 	bi trebao biti sortiran po ukupnom iznosu prodaja u silaznom redoslijedu
+
+	getAverageSale(List<Sale> sales) - ova metoda bi trebala vratiti prosječan iznos prodaje.
+
+3. U main klasi napravite listu Sale objekata i pozovite svaku od metoda.
