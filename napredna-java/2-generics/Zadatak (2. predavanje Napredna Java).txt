@@ -1,0 +1,21 @@
+ZADATAK - GENERIÈKA LISTA
+1. Kreirajte klasu "GenericList" koja æe sadržavati listu generièkih objekata. Klasa bi trebala koristiti genericse kako bi osigurali da može koristiti bilo koji tip elementa.
+
+2. Kreirana klasa bi trebala imati sljedeæe metode:
+ - add(T item) - dodaje element tipa T u listu
+ - get(int index) - dohvaæa element na odreðenom mjestu u listi
+ - remove(int index) - briše element na odreðenom mjestu u listi
+ - size() - vraæa broj elemenata u listi
+ - soString() - vraæa String reprezentaciju liste
+
+3. Krairajte klasu Main koja æe testirati GenericList klasu i napravite sljedeæe korake:
+ - napravite instancu GenericList klase koja sadržava cijelobrojne vrijednosti
+ - dodajte 5 vrijednosti u listu
+ - ispišite velièinu liste
+ - ispišite prvi i zadnji element u listi
+ - izbrišite element na indeksu 3
+ - ispišite velièinu liste
+ - ispišite sadržaj liste uz pomoæ toString() metoda
+ - kreirajte novu instancu klase GenericList koja sadrži String elemente
+ - dodajte string vrijednosti u listu
+ - ispišite sadržaj liste korištenjem toString() metode
