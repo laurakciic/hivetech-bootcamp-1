@@ -1,6 +1,6 @@
-public class MapperImpl implements Mapper {
+public class StudentMapper implements Mapper {
     @Override
-    public Student mapStudent(Student student) {
+    public Student incrementAge(Student student) {
         int id = student.getId();
         String name = student.getName();
         int age = student.getAge() + 1;

@@ -1,3 +1,3 @@
 public interface Mapper {
-    Student mapStudent(Student student);
+    Student incrementAge(Student student);
 }
