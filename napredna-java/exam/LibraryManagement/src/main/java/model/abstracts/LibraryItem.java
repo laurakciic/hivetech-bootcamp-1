@@ -2,19 +2,21 @@ package model.abstracts;
 
 import model.enums.ItemType;
 
+import java.util.UUID;
+
 public abstract class LibraryItem {
 
-    private int id;
+    private UUID id;
     private String title;
     private Person author;
     private int publication_year;
     private ItemType itemType;
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

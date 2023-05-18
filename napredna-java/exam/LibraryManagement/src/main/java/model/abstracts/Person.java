@@ -1,16 +1,18 @@
 package model.abstracts;
 
+import java.util.UUID;
+
 public abstract class Person {
 
-    private int id;
+    private UUID id;
     private String first_name;
     private String last_name;
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
