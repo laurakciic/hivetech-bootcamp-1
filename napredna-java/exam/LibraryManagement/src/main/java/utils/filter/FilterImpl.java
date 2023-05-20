@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class ItemFilterImpl implements ItemFilter {
+public class FilterImpl implements Filter {
     @Override
     public List<LibraryItem> filterItems(List<LibraryItem> items, Predicate<LibraryItem> filter) {
         List<LibraryItem> result = new ArrayList<>();

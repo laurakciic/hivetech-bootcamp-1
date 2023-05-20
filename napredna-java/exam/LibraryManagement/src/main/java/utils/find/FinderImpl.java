@@ -1,31 +1,12 @@
-package service.h2;
+package utils.find;
 
 import model.abstracts.LibraryItem;
-import service.ItemService;
 import utils.exceptions.NotFoundException;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 
-public class ItemServiceH2<T> implements ItemService<T> {
-    private Map<UUID, T> items;
-
-    @Override
-    public void addItem(UUID id, T item) {
-        items.put(id, item);
-    }
-
-    @Override
-    public void removeItem(UUID id) {
-        items.remove(id);
-    }
-
-    @Override
-    public T getItem(UUID id) {
-        return items.get(id);
-    }
+public class FinderImpl implements Finder {
 
     @Override
     public LibraryItem findOldestItem(List<LibraryItem> items) throws NotFoundException {

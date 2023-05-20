@@ -1,15 +1,17 @@
 package model.abstracts;
 
+import model.Author;
 import model.enums.ItemType;
 
+import java.time.Year;
 import java.util.UUID;
 
 public abstract class LibraryItem {
 
     private UUID id;
     private String title;
-    private Person author;
-    private int publication_year;
+    private Author author;
+    private Year publication_year;
     private ItemType itemType;
 
     public UUID getId() {
@@ -28,19 +30,19 @@ public abstract class LibraryItem {
         this.title = title;
     }
 
-    public Person getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(Person author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
-    public int getPublication_year() {
+    public Year getPublication_year() {
         return publication_year;
     }
 
-    public void setPublication_year(int publication_year) {
+    public void setPublication_year(Year publication_year) {
         this.publication_year = publication_year;
     }
 

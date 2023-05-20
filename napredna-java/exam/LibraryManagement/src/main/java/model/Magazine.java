@@ -1,13 +1,12 @@
 package model;
 
 import model.abstracts.LibraryItem;
-import model.abstracts.Person;
 
 public class Magazine extends LibraryItem {
 
     private int issue_number;
 
-    private Person publisher;
+    private Publisher publisher;
 
     public int getIssue_number() {
         return issue_number;
@@ -17,11 +16,11 @@ public class Magazine extends LibraryItem {
         this.issue_number = issue_number;
     }
 
-    public Person getPublisher() {
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(Person publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 }

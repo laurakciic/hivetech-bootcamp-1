@@ -1,14 +1,13 @@
 package model;
 
 import model.abstracts.LibraryItem;
-import model.abstracts.Person;
 import model.enums.Rating;
 
 public class DVD extends LibraryItem {
 
     private int duration_minutes;
 
-    private Person director;
+    private Director director;
 
     private Rating rating;
 
@@ -20,11 +19,11 @@ public class DVD extends LibraryItem {
         this.duration_minutes = duration_minutes;
     }
 
-    public Person getDirector() {
+    public Director getDirector() {
         return director;
     }
 
-    public void setDirector(Person director) {
+    public void setDirector(Director director) {
         this.director = director;
     }
 

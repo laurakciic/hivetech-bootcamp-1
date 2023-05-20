@@ -1,20 +1,15 @@
 package service;
 
 import model.abstracts.LibraryItem;
-import utils.exceptions.NotFoundException;
 
-import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
-public interface ItemService<T> {
+public interface ItemService {
 
-    void addItem(UUID id, T item);
+    void addItem(UUID id, LibraryItem item);
 
     void removeItem(UUID id);
 
-    T getItem(UUID id);
-
-    LibraryItem findOldestItem(List<LibraryItem> items) throws NotFoundException;
-
-    List<LibraryItem> findItemsByKeyword(List<LibraryItem> items, String keyword);
+    Optional<LibraryItem> getItemById(UUID id);
 }
